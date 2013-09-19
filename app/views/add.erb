@@ -1,0 +1,16 @@
+
+<h1>New Post</h1>
+<form action='/post' method='POST'>
+  <div>
+      <label for='Title'>Title:  </label>
+      <input id="Title" type="text" name="post[:title]">
+  </div>
+  <div>
+    <label for="Post">Post: </label>
+    <textarea cols="50" rows="4" name="post[body]"></textarea>
+  </div>
+  <div>
+    <label for='Tags'>Tags:  </label>
+    <input id="Tags" type="text" name="post[tags]">
+  </div>
+</form>

@@ -1,0 +1,29 @@
+  <h1>Sinatra Blog</h1>
+  <h2>Posts</h2>
+
+  <table>
+    <tr>
+      <th>Post Date |</th>
+      
+      <th>Post Title</th>
+    </tr>
+    <tbody>
+        <tr>
+          <% @posts.each do |post| %>
+          <td><%= post.timestamps %> </td>
+          <td><%= post.title %></td>
+          <td><a href='/post/<%=post.id%>'> <%= post.title %> </a></td>
+          <br>
+          <td>
+            <form action="/post/edit" method="POST">
+              <input type="submit" value="Edit Post">
+            </form>
+            <form action="/post/add" method="POST">
+              <input type="submit" value="Add Post">
+            </form>
+          </td>
+      <% end %>
+    </tr>
+    </tbody>
+  </table>
+  
