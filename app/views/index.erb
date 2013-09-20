@@ -3,19 +3,21 @@
 
   <table>
     <tr>
-      <th>Post Date |</th>
+      <th>Post ID |</th>
       
       <th>Post Title</th>
     </tr>
     <tbody>
         <tr>
           <% @posts.each do |post| %>
-          <td><%= post.timestamps %> </td>
-          <td><%= post.title %></td>
+          <td><%= post.updated_at %></td>
+        </tr>
+          <td><%= post.id %></td><br>
           <td><a href='/post/<%=post.id%>'> <%= post.title %> </a></td>
           <br>
+        </tr>
           <td>
-            <form action="/post/edit" method="POST">
+            <form action='/post/<%=post.id%>/edit' method="POST">
               <input type="submit" value="Edit Post">
             </form>
             <form action="/post/add" method="POST">
@@ -23,7 +25,6 @@
             </form>
           </td>
       <% end %>
-    </tr>
     </tbody>
   </table>
   

@@ -1,3 +1,4 @@
 class Tag < ActiveRecord::Base
-  belongs_to_many :posts, :through => :unicorns
+  has_many :posts
+  has_many :unicorns
 end

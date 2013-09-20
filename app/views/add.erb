@@ -3,14 +3,18 @@
 <form action='/post' method='POST'>
   <div>
       <label for='Title'>Title:  </label>
-      <input id="Title" type="text" name="post[:title]">
+      <input id="Title" type="text" name="post[title]">
   </div>
+  <br>
   <div>
     <label for="Post">Post: </label>
-    <textarea cols="50" rows="4" name="post[body]"></textarea>
+    <textarea cols="40" rows="8" name="post[body]"></textarea>
   </div>
+  <br>
   <div>
     <label for='Tags'>Tags:  </label>
     <input id="Tags" type="text" name="post[tags]">
   </div>
 </form>
+    <form action="/post/add" method="POST">
+    <input type="submit" value="Submit">

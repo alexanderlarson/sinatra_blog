@@ -1,0 +1,16 @@
+<form action='/post' method='POST'>
+  <div>
+    <label for='Title'>Title: </label>
+    <input id="Title" type="text" name="post[title]" value"<%= @post.try(:title)%>">
+  </div>
+  <div>
+    <label for="Post">Post: </label>
+    <textarea cols="50" rows="4" name="post[body]" value"<%= @post.try(:body)%>"></textarea>
+  </div>
+  <div>
+    <label for='Tags'>Tags: </label>
+    <input id="Tags" type="text" name="post[tags]" value"<%= @post.try(:tags)%>
+  </div>
+</form>
+  <form action="/post/add" method="POST">
+  <input type="submit" value="Submit Edit">
